@@ -21,4 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('greet').innerHTML = greet();
     document.getElementById('platform-info').innerHTML = os.platform();
     document.getElementById('env-name').innerHTML = env.name;
+
+    // var image_dir = jetpack.cwd(app.getAppPath());
+
+
+    console.log('2 The author of this app is:', appDir.read('package.json', 'json').author);
+    console.log('3 appDir.list()[0]:', appDir.list('.'));
+
+
+
+    document.getElementById('image_list').innerHTML = appDir.list('images');
+
+
+
+    // console.log('The author of this app is:', appDir.read('package.json', 'json').author);
+
+
+    // $(function () { $('#jstree_demo_div').jstree(); });
 });
